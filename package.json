@@ -4,10 +4,10 @@
   "description": "a stupid api for randomly getting extreme ironing images",
   "main": "server.js",
   "dependencies": {
-    "hapi": "^8.0.0",
-    "image-size": "^0.3.5",
-    "newrelic": "^1.14.5",
-    "require-dir": "^0.1.0"
+    "hapi": "8.0.0",
+    "image-size": "0.3.5",
+    "newrelic": "1.14.5",
+    "require-dir": "0.1.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/adunkman/extreme-ironing/issues"
   },
-  "homepage": "https://github.com/adunkman/extreme-ironing"
+  "homepage": "https://github.com/adunkman/extreme-ironing",
+  "engines": {
+    "node": "0.10.35"
+  }
 }
