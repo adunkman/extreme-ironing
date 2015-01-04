@@ -1,6 +1,6 @@
 {
   "name": "extreme-ironing",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "a stupid api for randomly getting extreme ironing images",
   "main": "server.js",
   "dependencies": {
