@@ -16,23 +16,22 @@ var images = function (server) {
 };
 
 images.random = function (request, reply) {
-  var iron = irons[Math.floor(Math.random() * irons.length)];
-  images.serve(reply, iron);
+  reply(irons[Math.floor(Math.random() * irons.length)]);
 };
 
 images.specific = function (request, reply) {
   for (var i = irons.length - 1; i >= 0; i--) {
     if (irons[i].path === request.path) {
-      return images.serve(reply, iron);
+      return images.serve(reply, irons[i]);
     }
   };
 };
 
 images.serve = function (reply, iron) {
   var response = reply.file(path.join(__dirname, "../irons/" + iron.filename));
-  response.header("X-PermalinkPath", iron.path);
   response.header("X-SourceUrl", iron.source);
-  response.header("X-Dimensions", iron.width + "x" + iron.height);
+  response.header("X-ImageWidth", iron.width);
+  response.header("X-ImageHeight", iron.height);
 };
 
 module.exports = images;
