@@ -1,0 +1,12 @@
+language: node_js
+
+node_js:
+- '0.10'
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: P5FxdyAUr/gqVbzxUBkjhFjNeXh5ZESs/a3eMmFrjM1StpW+G/QSiZG4Q9GLLnGjFCaXN9z1HhgVrgKi2sPhZMhSGS8kyjOCrYXfRNW1rZ3usvVWKZZscSST8MzmX3QZQjfZNqnaexjov33vgNTV0BVMCwARCXPPTinQk5GH7k0=
+  app: extreme-ironing
+  on:
+    repo: adunkman/extreme-ironing
